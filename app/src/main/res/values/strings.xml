@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Local Banks</string>
+    <string name="press_and_hold_for_more_options">Press and Hold for more options</string>
+    <string name="dbs">DBS</string>
+    <string name="ocbc">OCBC</string>
+    <string name="uob">UOB</string>
+</resources>
