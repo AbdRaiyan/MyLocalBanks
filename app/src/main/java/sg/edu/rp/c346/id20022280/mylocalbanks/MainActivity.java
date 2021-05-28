@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -89,5 +90,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onContextItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.EnglishTL) {
+            tvDBS.setText("DBS");
+            tvOCBC.setText("OCBC");
+            tvUOB.setText("UOB");
+        } else if (id == R.id.ChineseTL) {
+            tvDBS.setText("星展银行");
+            tvOCBC.setText("华侨银行");
+            tvUOB.setText("大华银行");
+        } else {
+            tvDBS.setText("ERROR");
+            tvOCBC.setText("ERROR");
+            tvUOB.setText("ERROR");
+        }
+
+    return super.onOptionsItemSelected(item);
     }
 }
